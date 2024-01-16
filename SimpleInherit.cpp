@@ -3,15 +3,15 @@ using namespace std;
 
 class Move {
     public:
-        void MoveHead() {
+        virtual void MoveHead() {
             cout << "Покрутил головой...\n";
         }
 
-        void HRU() {
+        virtual void HRU() {
             cout << " Хрю-Хрю, я свинотыш\n";
         }
 
-        void SayWord() {
+        virtual void SayWord() {
             cout << "Hey!!\n";
         }
 
@@ -43,6 +43,7 @@ class Mechanic : public  Human {
         string Specialization;
     public:
         //init
+        Mechanic(){};
         Mechanic(string NAME, unsigned int AGE,bool GEND, unsigned int Master, string Spec) {
             Human(NAME, AGE, GEND);
             MasterValue = Master;
@@ -98,7 +99,16 @@ int main()
     Mechanic Terentiy("Bob", 34, 0, 4, "Car repair");
     Terentiy.setSpecialise("Car disrepairer");
     Terentiy.setMasterValue(6);
+    Director MAIN_SHISHKA("Yaggi", 23, 1);
+    Stazhor Me("LOX", 22, 0, 100);
+    MAIN_SHISHKA.setGender(0);
     
+    MAIN_SHISHKA.setName("BUGGY");
+    cout << MAIN_SHISHKA.getName() << endl;
+  
+    
+    Me.setName("HUUU?");
+    cout << Me.getName();
     
     return 0;
 }
