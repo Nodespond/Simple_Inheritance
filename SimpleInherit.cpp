@@ -1,7 +1,23 @@
 ﻿#include <iostream>
 using namespace std;
 
-class Human {
+class Move {
+    public:
+        void MoveHead() {
+            cout << "Покрутил головой...\n";
+        }
+
+        void HRU() {
+            cout << " Хрю-Хрю, я свинотыш\n";
+        }
+
+        void SayWord() {
+            cout << "Hey!!\n";
+        }
+
+};
+
+class Human: public Move {
     protected:
       string name;
       bool Genda;      //1 - woman , 0 - man
@@ -49,7 +65,27 @@ class Mechanic : public  Human {
 
 };
 
+class Stazhor : public Mechanic, public Human {
+    private:
+        unsigned int ErrorCount;
+    public:
+        Stazhor(string NAME_ , unsigned int AGE_, bool GEND_, unsigned int Err){
+            Mechanic(NAME_, AGE_, GEND_, 0, "Loser repairer");
+            ErrorCount = Err;
+        };
 
+
+};
+
+class Director : public Human, public Move {
+    private:
+        int rep;
+    public:
+        Director(string NAM, unsigned int ag, bool gnd) {
+            Human(NAM, ag, gnd);
+        }
+
+};
 
 int main()
 {
