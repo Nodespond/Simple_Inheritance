@@ -64,6 +64,16 @@ class Mechanic : public  Human {
             return Specialization;
         }
 
+    void HRU() {
+       
+        cout << "WHY" << endl;
+   }
+
+    void SayWord() {
+        cout << "GAIKA!" << endl;
+   }
+
+
 };
 
 class Stazhor : public Mechanic, public Human {
@@ -86,6 +96,15 @@ class Director : public Human, public Move {
             Human(NAM, ag, gnd);
         }
 
+void HRU() {
+    cout << "WHREEEEEEEEE" << endl;
+}
+
+void SayWord() {
+  
+    cout << "Da ponabiraut do....na work" << endl;
+}
+
 };
 
 int main()
@@ -105,7 +124,10 @@ int main()
     
     MAIN_SHISHKA.setName("BUGGY");
     cout << MAIN_SHISHKA.getName() << endl;
-  
+    MAIN_SHISHKA.SayWord();
+    Me.SayWord();
+    Terentiy.SayWord();
+    human1.SayWord();
     
     Me.setName("HUUU?");
     cout << Me.getName();
