@@ -21,7 +21,33 @@ class Human {
 
 };
 
+class Mechanic : public  Human {
+    private:
+        unsigned int MasterValue;
+        string Specialization;
+    public:
+        //init
+        Mechanic(string NAME, unsigned int AGE,bool GEND, unsigned int Master, string Spec) {
+            Human(NAME, AGE, GEND);
+            MasterValue = Master;
+            Specialization = Spec;
+        }
+        //setters
+        void setMasterValue(unsigned int a) {
+            MasterValue = a;
+        }
+        void setSpecialise(string Specc) {
+            Specialization = Specc;
+        }
+        //getters
+        unsigned int setMasterValue() {
+            return MasterValue;
+        }
+        string setSpecialise() {
+            return Specialization;
+        }
 
+};
 
 
 
