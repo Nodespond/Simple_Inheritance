@@ -54,8 +54,14 @@ class Mechanic : public  Human {
 int main()
 {
     Human human1;
-    Human human2;
-    Human human3;
+    Human human2("Vasya",43,0);
+    Human human3("Igor",16,1);
+    human1.setAge(10);
+    human1.setName("Valya");
+    human1.setGender(true);
+    Mechanic Terentiy("Bob", 34, 0, 4, "Car repair");
+    Terentiy.setSpecialise("Car disrepairer");
+    Terentiy.setMasterValue(6);
     
     
     return 0;
