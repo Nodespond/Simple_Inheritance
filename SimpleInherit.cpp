@@ -10,6 +10,15 @@ class Human {
         //initialization
         Human() {};
         Human( string Name, unsigned int Age, bool gender) { name = Name; age = Age; Genda = gender; };
+        //getters
+        string getName() { return name; };
+        unsigned int getAge() { return age; };
+        bool getGender() { return Genda; };
+        //setters
+        void setName(string NAME) { name = NAME; };
+        void setAge(unsigned int AGE) { age = AGE; };
+        void setGender(bool GENDA) { Genda = GENDA; };
+
 };
 
 
