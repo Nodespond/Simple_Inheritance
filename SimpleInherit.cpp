@@ -3,9 +3,13 @@ using namespace std;
 
 class Human {
     protected:
-
+      string name;
+      bool Genda;      //1 - woman , 0 - man
+      unsigned int age;
     public:
-
+        //initialization
+        Human() {};
+        Human( string Name, unsigned int Age, bool gender) { name = Name; age = Age; Genda = gender; };
 };
 
 
